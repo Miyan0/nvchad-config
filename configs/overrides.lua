@@ -47,6 +47,7 @@ M.nvimtree = {
       "**/node_modules",
       "**/%.git",
       "**/%.github",
+      ".*_templ.go",
     },
   },
   git = {

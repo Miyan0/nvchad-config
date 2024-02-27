@@ -157,6 +157,25 @@ local plugins = {
       "nvim-lua/plenary.nvim",
     },
   },
+
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    event = "BufRead",
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    event = "VeryLazy",
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
 }
 
 return plugins

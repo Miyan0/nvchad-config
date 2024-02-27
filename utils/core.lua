@@ -75,6 +75,7 @@ M.statusline = {
     modules[1] = (function()
       local st_modules = require "nvchad.statusline.vscode_colored"
       local modes = st_modules.modes
+
       modes["n"][3] = "  "
       modes["v"][3] = "  "
       modes["i"][3] = "  "
