@@ -104,47 +104,6 @@ local plugins = {
       -- or run <leader>ch to see copilot mapping section
     end,
   },
-  --[[
---
-  {
-    "zbirenbaum/copilot.lua",
-    -- enabled = vim.g.is_code_private(),
-    enabled = true,
-    dependencies = {
-      "hrsh7th/nvim-cmp",
-    },
-    cmd = "Copilot",
-    build = ":Copilot auth",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup {
-        panel = {
-          enabled = true,
-          auto_refresh = true,
-        },
-        suggestion = {
-          enabled = true,
-          auto_trigger = true,
-          accept = false,
-        },
-      }
-
-      -- hide copilot suggestions when cmp menu is open
-      -- to prevent odd behavior/garbled up suggestions
-      local cmp_status_ok, cmp = pcall(require, "cmp")
-      if cmp_status_ok then
-        cmp.event:on("menu_opened", function()
-          vim.b.copilot_suggestion_hidden = true
-        end)
-
-        cmp.event:on("menu_closed", function()
-          vim.b.copilot_suggestion_hidden = false
-        end)
-      end
-    end,
-  },
-
---]]
   {
     "gennaro-tedesco/nvim-jqx",
     ft = { "json", "yaml" },
@@ -168,12 +127,24 @@ local plugins = {
       -- refer to the configuration section below
     },
   },
+
   {
     "kdheepak/lazygit.nvim",
     event = "VeryLazy",
     -- optional for floating window border decoration
     dependencies = {
       "nvim-lua/plenary.nvim",
+    },
+  },
+
+  {
+    "folke/todo-comments.nvim",
+    event = "VeryLazy",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
     },
   },
 }

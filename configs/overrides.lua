@@ -42,12 +42,14 @@ M.mason = {
 -- https://github.com/BrunoKrugel/dotfiles/blob/master/configs/overrides.lua
 M.nvimtree = {
   filters = {
-    dotfiles = true,
+    dotfiles = false,
     custom = {
       "**/node_modules",
       "**/%.git",
       "**/%.github",
       ".*_templ.go",
+      ".DS_Store",
+      ".idea",
     },
   },
   git = {

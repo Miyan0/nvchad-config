@@ -58,6 +58,11 @@ M.general = {
       "Quit without saving",
     },
     ["cp"] = { ":Copilot panel<enter>", "Copilot panel" },
+
+    ["<Esc>"] = {
+      ":nohl<CR>",
+      "Clear search highlights",
+    },
   },
 }
 

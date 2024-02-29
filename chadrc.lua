@@ -6,9 +6,9 @@ local highlights = require "custom.highlights"
 
 M.ui = {
   theme = "aquarium",
-
   telescope = { style = "bordered" }, -- borderless / bordered
   -- statusline = core.statusline,
+  -- TODO: Find how to change percent to line numbers and column numbers.
   statusline = {
     theme = "default", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
